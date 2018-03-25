@@ -1,0 +1,62 @@
+John Hopkins - Coursera Capstone Capstone Pitch-Slides
+========================================================
+author: Steve Dubois
+date: 25 March 2018
+autosize: true
+
+
+Data Science Capstone- Final Project(NextWord)
+========================================================
+The goal of this exercise is to create a product to highlight the prediction algorithm
+- Algorithm for predicting the next word given one or more words uses NLP
+- The data used for this project was provided by swiftkey in association with coursera. A large corpus of blog, news and twitter data was loaded, cleaned and analysed.
+- N-Grams upto 5 were created and used with back off techniques to build this project
+  
+
+
+Short Brief
+========================================================
+I am using the NLP technique with stupid back-off strategy to build this predictive model.
+
+The quanteda and tm package are used extensively.The quanteda pakcage is more useful in creating N-Grams as they use less memory.
+
+The tm package was used for building the corpus and cleaning the corpus of stopwords, puntuation, number and special characters etc.
+
+1 to 5 - Grams were built,stored and used with a backoff strategy to predict the next word
+
+
+Shiny App Interface
+=================================
+-Provides a input text for the user to input a word or a sentence
+-The app will start predicting as soon as the something is entered in input text box.
+=The best possible next word for the input text will be displayed.
+-Work is in progress to provide best 5 words based on the input text
+f you haven't tried out the app, go [here](https://stevedubois.shinyapps.io/app5/) to try it!
+
+- Predicts next word as the user types a sentence
+- Similar to the way most smart phone keyboards are implemented today using the technology of Swiftkey
+
+The quanteda and tm package are used extensively.The quanteda pakcage is more useful in creating N-Grams as they use less memory.
+
+The tm package was used for building the corpus and cleaning the corpus of stopwords, puntuation, number and special characters etc.
+
+
+
+N-gram model with "Stupid Backoff" ([Brants et al)
+========================================================
+
+-http://www.cs.columbia.edu/~smaskey/CS6998-0412/supportmaterial/langmodel_mapreduce.pdf)
+
+- Checks if highest-order (in this case, n=4) n-gram has been seen. If not "degrades" to a lower-order model (n=3, 2); we would use even higher orders, but ShinyApps caps app size at 100mb
+
+<div style="align:top"><img src="./www.algo-flow.png" alt="algorithm flow" /></div>
+
+
+Links and Resources
+=================================
+-The app can be accessed form here: https://stevedubois.shinyapps.io/app5/
+The presentation/pitch/slides is here:
+-The code for the project can be accessed from here https://github.com/steveduboi/Capstone_Project.git
+-https://rpubs.com/mszczepaniak/predictkbo3model
+-https://en.wikipedia.org/wiki/Katz%27s_back-off_model
+-http://www.hlt.utdallas.edu/~sanda/courses/NLP/Lecture06.pdf
